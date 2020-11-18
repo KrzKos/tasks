@@ -6,8 +6,6 @@ import org.springframework.stereotype.Component;
 import pl.kostkiewicz.tasks.dto.TaskDTO;
 import pl.kostkiewicz.tasks.model.Task;
 
-import java.util.Optional;
-
 @Component
 @Slf4j
 public class TaskMapper {
@@ -27,8 +25,4 @@ public class TaskMapper {
         return task;
     }
 
-    /*public Optional<TaskDTO> from(Optional<Task> task) {
-        ModelMapper modelMapper = new ModelMapper();
-        Optional<TaskDTO> result = modelMapper.map(task, TaskDTO.class)
-    }*/
 }

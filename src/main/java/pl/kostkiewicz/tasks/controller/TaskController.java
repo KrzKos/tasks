@@ -8,7 +8,6 @@ import pl.kostkiewicz.tasks.service.TaskService;
 
 import java.net.URI;
 import java.util.List;
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @RestController
@@ -45,7 +44,8 @@ public class TaskController {
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable long id){
+    public ResponseEntity delete(@PathVariable long id){
         taskService.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }
