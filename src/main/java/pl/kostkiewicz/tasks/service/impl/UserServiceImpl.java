@@ -8,12 +8,14 @@ import pl.kostkiewicz.tasks.model.User;
 import pl.kostkiewicz.tasks.repository.UserRepository;
 import pl.kostkiewicz.tasks.service.UserService;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
+@Transactional
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final UserMapper userMapper;
