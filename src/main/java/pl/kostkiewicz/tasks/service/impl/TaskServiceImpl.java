@@ -11,12 +11,14 @@ import pl.kostkiewicz.tasks.repository.TaskRepository;
 import pl.kostkiewicz.tasks.repository.UserRepository;
 import pl.kostkiewicz.tasks.service.TaskService;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
+@Transactional
 public class TaskServiceImpl implements TaskService {
     private final TaskMapper taskMapper;
     private final TaskRepository taskRepository;
